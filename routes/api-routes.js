@@ -1,11 +1,12 @@
 // Requiring our models and passport as we've configured it
-var db = require("../../models");
-var passport = require("../../config/passport");
+var db = require("../models");
+var passport = require("../config/passport");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
+  //if you want login for your app, you can setup with code below
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({

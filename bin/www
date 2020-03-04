@@ -1,7 +1,0 @@
-var app = require('../server/server'); 
-
-//SERVE APP: entry point from the command line//
-var port= 8001;
-app.listen(port, function (){
-    console.log('running at localhost:' + PORT);
-});
