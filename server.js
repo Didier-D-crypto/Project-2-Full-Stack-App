@@ -1,15 +1,40 @@
 // Requiring necessary npm packages
-var express = require("express");
-var session = require("express-session");
+const express = require("express");
+const session = require("express-session");
 // Requiring passport as we've configured it
-var passport = require("./config/passport");
-
+const passport = require("./config/passport");
+//const bodyParser = require("bodyParser");
+//const path = require("path");
+//const exphbs = require("express-handlebars");
 // Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
+const PORT = process.env.PORT || 8080;
+const db = require("./models");
+/* Added to test Association */
+const User = require("./models").User;
+const Itineraries = require("./models").Itineraries;
+
+// console.log(User);
+// console.log(Itineraries);
+
+User.create({
+  email: "d@d.com", 
+  password: "abab"
+});
+
+Itineraries.create({
+    start_date: '2019-03-06',
+    end_date: '2019-03-09',
+    city: "Made up",
+    food: "this",
+    activities: "this",
+    nigthtime: "this",
+    reviews: "Awesome!!",
+    userId: '1',
+    cityId: '2'
+  });
 
 // Creating express app and configuring middleware needed for authentication
-var app = express();
+const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
