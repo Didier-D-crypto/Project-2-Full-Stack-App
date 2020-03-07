@@ -27,8 +27,6 @@ module.exports = (sequelize, DataTypes) => {
       });
     };
   };
-
-
   return Itineraries;
 };
 

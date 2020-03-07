@@ -17,7 +17,7 @@ const Itineraries = require("./models").Itineraries;
 // console.log(Itineraries);
 
 User.create({
-  email: "Vince@vince.com", 
+  email: "d@d.com", 
   password: "abab"
 });
 
@@ -29,6 +29,8 @@ Itineraries.create({
     activities: "this",
     nigthtime: "this",
     reviews: "Awesome!!",
+    userId: '1',
+    cityId: '2'
   });
 
 // Creating express app and configuring middleware needed for authentication
