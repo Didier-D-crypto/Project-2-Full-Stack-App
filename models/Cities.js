@@ -1,5 +1,6 @@
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
+  
   const Cities = sequelize.define('Cities', {
     name: DataTypes.STRING,
     itinerary_id: {
@@ -16,4 +17,3 @@ module.exports = (sequelize, DataTypes) => {
   };
   return Cities;
 };
-
