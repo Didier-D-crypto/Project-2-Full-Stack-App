@@ -57,5 +57,108 @@ module.exports = function(app) {
         res.json(dbPost);
       });
     });
+
+
+  // app.get("/api/itineraries", (req, res) =>{
+  //   db.Itineraries.findAll({}).then(dbItin => {
+  //     res.json(dbItin);
+  //   });
+  // });
+
+  // app.get("/api/users1", (req,res) => {
+  //   db.User.findAll({
+  //     include: [db.Itineraries]
+  //   }).then(dbUsers => {
+  //     console.log(dbUsers);
+  //   });
+  // });
+
+  // app.get("/api/users/:id", (req,res) => {
+  //     db.User.findOne({
+  //       where: {
+  //         id: req.params.id
+  //       },
+  //       include: [db.Itineraries]
+  //     }).then(dbUser => {
+  //       res.json(dbUser)
+  //     });
+  // });
+
+  // app.post("/api/users", (req, res) => {
+  //   db.User.create(req.body).then(dbUser => {
+  //   res.json(dbUser);
+  // });
+  // });
+
+  // app.delete("/api/users/:id", (req, res) => {
+  //   db.User.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(dbUser => {
+  //     res.json(dbUser);
+  //   });
+  // });
+
+  /* Code For itinerary-routes.js */
+
+  // Check the user_id + userId difference!!!!
+  // Getting all of the Itineraries: note that this uses "user_id" + "userId"  
+  // app.get("/api/itineraries", (req, res) => {
+  //   var query = {};
+  //   if (req.query.user_id) {
+  //     query.userId = req.query.user_id;
+  //   }
+  //   db.Itinerary.findAll({
+  //     where: query,
+  //     include: [db.User]
+  //   }).then(dbItin => {
+  //     res.json(dbItin);
+  //   });
+  // });
+
+  // route for retrieving a single Itinerary
+  // app.get("/api/itineraries/:id", (req, res) => {
+  //   db.Itineraries.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     },
+  //     include: [db.User]
+  //   }).then(dbItin => {
+  //     res.json(dbItin);
+  //   });
+  // });
+
+  // Post route for saving Itineraries
+  // app.post('api/itineraries', (req, res) => {
+  //   db.Itineraries.create(req.body).then(dbItin => {
+  //     res.json(dbItin);
+  //   });
+  // });
+
+  // DELETE route for deleting Itineraries
+  // app.delete("api/itineraries/:id", (req, res) => {
+  //   db.Itineraries.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(dbItin => {
+  //     res.json(dbItin);
+  //   });
+  // });
+
+  // PUT route for updating Itineraries
+  // app.put("api/itineraries", (req, res) => {
+  //   db.Itineraries.update(
+  //     req.body,
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }).then(dbItin => {
+  //       res.json(dbItin)
+  //     });
+  // });
+
 };
 

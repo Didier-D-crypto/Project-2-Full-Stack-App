@@ -8,21 +8,27 @@ module.exports = (sequelize, DataTypes) => {
     activities: DataTypes.STRING,
     nigthtime: DataTypes.STRING,
     reviews: DataTypes.STRING, 
-    usersId: {
+    user_id: {
       type: DataTypes.INTEGER
     },
-    cityId: {
+    city_id: {
       type: DataTypes.INTEGER
     }
   });
 
-  Itineraries.associate = (models) => {
-    /* foreignKey was 'usersId' */
+  Itineraries.associate = (models) => {    
     Itineraries.belongsTo(models.User), {
       foreignKey: {
-      allowNull: false
+        allowNull: false
+      }
     }
-  }};
+    Itineraries.associate = (models) => {
+      Itineraries.hasMany(models.Cites, {
+      });
+    };
+  };
+
+
   return Itineraries;
 };
 

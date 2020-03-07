@@ -4,32 +4,32 @@ const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 //const bodyParser = require("bodyParser");
-const path = require("path");
-const exphbs = require("express-handlebars");
+//const path = require("path");
+//const exphbs = require("express-handlebars");
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 /* Added to test Association */
-//const User = require("./models").User;
-//const Itineraries = require("./models").Itineraries;
+const User = require("./models").User;
+const Itineraries = require("./models").Itineraries;
 
 // console.log(User);
 // console.log(Itineraries);
 
-// User.create({
-//   email: "li88@m.com", 
-//   password: "abab"
-// });
+User.create({
+  email: "Vince@vince.com", 
+  password: "abab"
+});
 
-// Itineraries.create({
-//     start_date: '2019-03-06',
-//     end_date: '2019-03-09',
-//     city: "Philadelphia",
-//     food: "cheesesteak",
-//     activities: "eating",
-//     nigthtime: "music",
-//     reviews: "Awesome!!",
-//   });
+Itineraries.create({
+    start_date: '2019-03-06',
+    end_date: '2019-03-09',
+    city: "Made up",
+    food: "this",
+    activities: "this",
+    nigthtime: "this",
+    reviews: "Awesome!!",
+  });
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
