@@ -51,4 +51,11 @@ module.exports = function(app) {
       });
     }
   });
+    /* Added 3/6/19 */
+    app.get("/api/users", (req, res) =>{
+      db.User.findAll({}).then(dbPost => {
+        res.json(dbPost);
+      });
+    });
 };
+

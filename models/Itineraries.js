@@ -7,11 +7,22 @@ module.exports = (sequelize, DataTypes) => {
     food: DataTypes.STRING,
     activities: DataTypes.STRING,
     nigthtime: DataTypes.STRING,
-    reviews: DataTypes.STRING
-    // 
-  }, {});
-  Itineraries.associate = function(models) {
-    // associations can be defined here
-  };
+    reviews: DataTypes.STRING, 
+    usersId: {
+      type: DataTypes.INTEGER
+    },
+    cityId: {
+      type: DataTypes.INTEGER
+    }
+  });
+
+  Itineraries.associate = (models) => {
+    /* foreignKey was 'usersId' */
+    Itineraries.belongsTo(models.User), {
+      foreignKey: {
+      allowNull: false
+    }
+  }};
   return Itineraries;
 };
+
