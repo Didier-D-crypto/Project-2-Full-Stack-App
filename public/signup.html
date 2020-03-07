@@ -1,49 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Trip Tips-Sign Up</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Saira&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
 
-<head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
 
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+  <body>
+    <section class="section">
+      <div class="container" style="margin-left: 375px">
+        <div class="card has-text-centered is-wide">
+          <div class="card-content">
+            <h1 class="heading">Sign Up Form</h1>
+            <form class="login">
+              <div class="field">
+                <br />
+                <p class="control has-icons-left has-icons-right">
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="Email"
+                    id="email-input"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input
+                    class="input"
+                    type="password"
+                    placeholder="Password"
+                    id="password-input"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button class="button is-info is-light" type="submit">
+                    Sign Up
+                  </button>
+                </p>
+              </div>
+              <div
+                style="display: none"
+                id="alert"
+                class="alert alert-danger"
+                role="alert"
+              >
+                <span
+                  class="glyphicon glyphicon-exclamation-sign"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Error:</span> <span class="msg"></span>
+              </div>
+              <p>Or log in <a href="/login">here</a></p>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
-        <br />
-        <p>Or log in <a href="/login">here</a></p>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
-
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+  </body>
 </html>

@@ -1,0 +1,90 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Saira&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <title>Trip Tips</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <section
+      class="hero"
+      style="background-color: lightsteelblue; border-bottom: lightslategray 5px solid;"
+    >
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered animated bounceIn">
+            Trip Tips
+          </h1>
+        </div>
+      </div>
+    </section>
+    <div
+      class="username"
+      style="background-color: lightslategray; padding: 10px"
+    >
+      <button
+        class="button is-info is-light"
+        id="getProfile"
+        style="margin-left: 1050px;"
+      >
+        <i class="fas fa-user"></i> Username
+      </button>
+    </div>
+    <br /><br /><br />
+
+    <div class="container">
+      <div
+        class="card has-text-centered is-wide main-center-card"
+        style="background-color: lightsteelblue; padding: 50px"
+      >
+        We're so excited you're here to plan a trip! <br />
+        Look through our exisiting itineraries; they're reviewed by users, or
+        create your own!
+        <br />
+        <div class="field has-addons has-text-centered">
+          <div class="control">
+            <input
+              class="input"
+              id="citySearch"
+              type="text"
+              placeholder="Search for a City"
+            />
+          </div>
+          <div class="control">
+            <a class="button is-info is-light">
+              Search
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- search for cities -->
+    </div>
+
+    <!-- main section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

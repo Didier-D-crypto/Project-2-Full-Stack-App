@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello Bulma!</title>
+    <title>Trip Tips</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
@@ -13,27 +13,75 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Saira&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald"
+      rel="stylesheet"
+    />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
   </head>
   <body>
-    <main role="main">
-      <div class="card has-text-centered is-wide">
-        <header class="card-header">
-          <h1>website name</h1>
-        </header>
-        <div class="card-content">
-          <h1>
-            Heading
-          </h1>
-          <p>
-            First line.<br />
-            Second line.
-          </p>
+    <section class="section">
+      <div class="container" style="margin-left: 375px">
+        <div class="card has-text-centered is-wide">
+          <div class="card-content">
+            <h1 class="heading animated bounce">trip tips</h1>
+            <h2 class="animated flipInY delay-1s">slogan</h2>
+            <br />
+            <form class="login animated fadeIn delay-2s">
+              <div class="field">
+                to get started, please log in.
+                <br />
+                <p class="control has-icons-left has-icons-right">
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="Email"
+                    id="email-input"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input
+                    class="input"
+                    type="password"
+                    placeholder="Password"
+                    id="password-input"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button class="button is-info is-light" type="submit">
+                    Login
+                  </button>
+                </p>
+              </div>
+              <p>Or sign up <a href="/">here</a></p>
+            </form>
+            <br />
+          </div>
         </div>
       </div>
-    </main>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>

@@ -1,36 +1,54 @@
-html,
-body {
-  display: flex;
+html {
   background-image: url("../img/9L1l4W.jpg");
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  font-family: "Open Sans Condensed", sans-serif;
+
+  font-family: "Cardo", serif;
+  /* font-family: "Open Sans Condensed", sans-serif; */
+}
+
+body {
+  font-family: "Cardo", serif;
 }
 
 .card.is-wide {
   width: 550px;
 }
 
-.card-header,
-.card-content,
-.card-footer {
-  justify-content: center;
-  align-items: center;
-}
 h1 {
-  font-size: 1.75rem;
   font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
   font-family: "Saira", sans-serif;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 70px;
+  letter-spacing: 15px;
+  color: midnightblue;
+}
+
+.main-center-card {
+  margin: 0px 375px 0px 375px;
+  color: midnightblue;
 }
 
 .card-header {
   padding: 1.75rem 0;
+  background-color: lightsteelblue;
 }
 
 .card-content {
-  padding: 3.5rem 0;
+  padding: 50px;
+  background-color: lightsteelblue;
+}
+
+.heading {
+  font-size: 45px;
+  letter-spacing: 10px;
+  color: midnightblue;
 }
 
 form.signup,
@@ -38,7 +56,22 @@ form.login {
   margin-top: 50px;
 }
 
-/* for moblie responsiveness */
-@media screen and (max-width: 1024px) {
-  /* Specific to this particular image */
+@media (max-width: 576px) {
+  .main-center-card {
+    margin: auto;
+  }
+
+  .section {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-center-card {
+    margin: auto;
+  }
+
+  .section {
+    margin: auto;
+  }
 }
