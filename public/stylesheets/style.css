@@ -93,12 +93,7 @@ form.login {
   .middle-card {
     width: auto;
   }
-
-  .section {
-    margin: auto;
-  }
 }
-
 @media (max-width: 768px) {
   .main-center-card,
   .middle-card {
@@ -106,9 +101,5 @@ form.login {
   }
   .middle-card {
     width: auto;
-  }
-
-  .section {
-    margin: auto;
   }
 }

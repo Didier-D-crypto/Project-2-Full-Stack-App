@@ -53,6 +53,7 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
+                  <!--Start Date Input 1-->
                   <input
                     class="input"
                     type="text"
@@ -66,6 +67,7 @@
               </div>
               <div class="field">
                 <p class="control is-expanded has-icons-left has-icons-right">
+                  <!--End Date Input 1-->
                   <input
                     class="input"
                     type="text"
@@ -87,6 +89,7 @@
             <div class="field is-expanded">
               <div class="field has-addons">
                 <p class="control is-expanded has-icons-left">
+                  <!--Search City Input-->
                   <input
                     class="input"
                     type="text"
@@ -105,7 +108,7 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <!-- event api button -->
+                <!-- event api button + City Search -->
                 <button class="button is-info is-light" id="event-search">
                   Search for Events
                 </button>
@@ -125,7 +128,7 @@
         <div class="column is-4">
           <h1 class="headingItinerary">Events during your trip</h1>
           <p>
-            Sometimes its hard to plan, below are a few things happening during
+            Sometimes it's hard to plan. Below are a few things happening during
             your trip. Use these as suggestions if you want to add onto your
             itinerary!
           </p>
@@ -142,11 +145,12 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control is-expanded has-icons-left">
+                    <!--Itin Start Date-->
                     <input
                       class="input"
                       type="text"
                       placeholder="Start Date"
-                      id="start-date"
+                      id="itinStartDate"
                     />
                     <span class="icon is-small is-left">
                       <i class="fas fa-calendar"></i>
@@ -155,11 +159,12 @@
                 </div>
                 <div class="field">
                   <p class="control is-expanded has-icons-left has-icons-right">
+                    <!--Itin End Date-->
                     <input
                       class="input"
                       type="text"
                       placeholder="End Date"
-                      id="end-date"
+                      id="itinEndDate"
                     />
                     <span class="icon is-small is-left">
                       <i class="fas fa-calendar"></i>
@@ -176,11 +181,12 @@
               <div class="field is-expanded">
                 <div class="field has-addons">
                   <p class="control is-expanded has-icons-left">
+                    <!--Itin City Input-->
                     <input
                       class="input"
                       type="text"
                       placeholder="City"
-                      id="searched-city"
+                      id="itinCity"
                     />
                     <span class="icon is-small is-left">
                       <i class="fas fa-globe"></i>
@@ -194,7 +200,9 @@
           <div class="field">
             <label class="label">Where are you eating?</label>
             <div class="control">
+              <!--Itin Food Textarea-->
               <textarea
+                id="foodTxtArea"
                 class="textarea"
                 placeholder="Breakfast, Lunch, Dinner"
               ></textarea>
@@ -206,7 +214,9 @@
               >What activities are you doing while you're there?</label
             >
             <div class="control">
+              <!--Itin Activiy Textarea-->
               <textarea
+                id="itinAct"
                 class="textarea"
                 placeholder="Activities, Sightseeing"
               ></textarea>
@@ -216,7 +226,9 @@
           <div class="field">
             <label class="label">Nightlife</label>
             <div class="control">
+              <!--Itin Nightlife Textarea-->
               <textarea
+                id="itinNight"
                 class="textarea"
                 placeholder="Parties, Clubs, Bars"
               ></textarea>
@@ -225,10 +237,16 @@
 
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-info is-light">Save</button>
+              <!--Save Button / "Submit" Button-->
+              <button id="saveItinBtn" class="button is-info is-light">
+                Save
+              </button>
             </div>
             <div class="control">
-              <button class="button is-info is-light">Email</button>
+              <!--Email Button-->
+              <button id="emailBtn" class="button is-info is-light">
+                Email
+              </button>
             </div>
           </div>
         </div>
@@ -239,6 +257,6 @@
     <footer class="footer"></footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/itinerary.js"></script>
+    <script type="text/javascript" src="formSub.js"></script>
   </body>
 </html>
