@@ -12,7 +12,7 @@ const db = require("./models");
 /* Added to test Association */
 const User = require("./models").User;
 const Itineraries = require("./models").Itineraries;
-
+const Cities = require("./models").Cities;
 // console.log(User);
 // console.log(Itineraries);
 
@@ -29,9 +29,15 @@ Itineraries.create({
     activities: "this",
     nigthtime: "this",
     reviews: "Awesome!!",
-    userId: '1',
-    cityId: '2'
+    user_id: '1',
+    city_id: '2'
   });
+
+Cities.create({
+  name: "Philadelphia",
+  itinerary_id: 2
+})
+
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
