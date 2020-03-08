@@ -5,12 +5,18 @@ html {
   /* font-family: "Open Sans Condensed", sans-serif; */
 }
 
-body {
+body,
+button,
+input,
+textarea {
   font-family: "Cardo", serif;
 }
 
 .card.is-wide {
   width: 550px;
+}
+.create-your-own {
+  font-family: "Cardo", serif;
 }
 
 h1 {
@@ -33,6 +39,15 @@ h2 {
 .main-center-card {
   margin: 0px 375px 0px 375px;
   color: midnightblue;
+  background-color: lightsteelblue;
+  padding: 30px;
+}
+
+.middle-card {
+  background-color: lightsteelblue;
+  padding: 15px 50px 15px 50px;
+  width: 960px;
+  margin-left: 200px;
 }
 
 .card-header {
@@ -51,14 +66,32 @@ h2 {
   color: midnightblue;
 }
 
+.headingItinerary {
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: midnightblue;
+}
+
+.footer {
+  padding: 25px;
+  background-color: midnightblue;
+  border-top: lightslategray 5px solid;
+  color: lightsteelblue;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
 }
 
 @media (max-width: 576px) {
-  .main-center-card {
+  .main-center-card,
+  .middle-card {
     margin: auto;
+  }
+
+  .middle-card {
+    width: auto;
   }
 
   .section {
@@ -67,8 +100,12 @@ form.login {
 }
 
 @media (max-width: 768px) {
-  .main-center-card {
+  .main-center-card,
+  .middle-card {
     margin: auto;
+  }
+  .middle-card {
+    width: auto;
   }
 
   .section {
