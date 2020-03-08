@@ -35,6 +35,7 @@ $(saveItinBtn).on("click", event => {
   console.log(newItin);
 });
 
+function eventAJAX(startDate, endDate, city) {}
 // function eventAJAX() {
 // 	// Write all AJAX response information to the page upon category click
 // 	$("#eventInfo").empty();
