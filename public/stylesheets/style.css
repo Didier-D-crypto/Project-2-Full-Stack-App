@@ -5,7 +5,6 @@ html {
   /* font-family: "Open Sans Condensed", sans-serif; */
 }
 
-
 body,
 button,
 input,
@@ -16,11 +15,9 @@ textarea {
 .card.is-wide {
   width: 550px;
 }
-
 .create-your-own {
   font-family: "Cardo", serif;
 }
-
 
 h1 {
   font-weight: bold;
@@ -51,7 +48,6 @@ h2 {
   padding: 15px 50px 15px 50px;
   width: 960px;
   margin-left: 200px;
-
 }
 
 .card-header {
@@ -68,7 +64,6 @@ h2 {
   font-size: 45px;
   letter-spacing: 10px;
   color: midnightblue;
-
 }
 
 .headingItinerary {
@@ -90,7 +85,6 @@ form.login {
 }
 
 @media (max-width: 576px) {
-
   .main-center-card,
   .middle-card {
     margin: auto;
@@ -99,8 +93,7 @@ form.login {
   .middle-card {
     width: auto;
   }
-
-
+}
 @media (max-width: 768px) {
   .main-center-card,
   .middle-card {
@@ -109,3 +102,4 @@ form.login {
   .middle-card {
     width: auto;
   }
+}

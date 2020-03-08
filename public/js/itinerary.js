@@ -11,30 +11,31 @@ const itinCity = $("#itinCity");
 const foodTxtArea = $("#foodTxtArea");
 const itinAct = $("#itinAct");
 const itinNight = $("#itinNight");
-const saveItinBtn = $('#saveItinBtn');
+const saveItinBtn = $("#saveItinBtn");
 const emailBtn = $("#emailBtn");
 
-$(eventSrchBtn).on("click", (event) => {
-    let newCitySearch = {
-        startDate: $(citySearchStartDate).val(),
-        endDate: $(citySearchEndDate).val(),
-        city: $(citySearch).val()
-    }
-    console.log(newCitySearch);
+$(eventSrchBtn).on("click", event => {
+  let newCitySearch = {
+    startDate: $(citySearchStartDate).val(),
+    endDate: $(citySearchEndDate).val(),
+    city: $(citySearch).val()
+  };
+  console.log(newCitySearch);
 });
 
-$(saveItinBtn).on("click", (event) => {
-    let newItin = {
-        start_date: $(itinStartDate).val(),
-        end_date: $(itinEndDate).val(),
-        city: $(itinCity).val(),
-        food: $(foodTxtArea).val(),
-        activities: $(itinAct).val(),
-        nighttime: $(itinNight).val()
-    }
-    console.log(newItin);
+$(saveItinBtn).on("click", event => {
+  let newItin = {
+    start_date: $(itinStartDate).val(),
+    end_date: $(itinEndDate).val(),
+    city: $(itinCity).val(),
+    food: $(foodTxtArea).val(),
+    activities: $(itinAct).val(),
+    nighttime: $(itinNight).val()
+  };
+  console.log(newItin);
 });
 
+function eventAJAX(startDate, endDate, city) {}
 // function eventAJAX() {
 // 	// Write all AJAX response information to the page upon category click
 // 	$("#eventInfo").empty();

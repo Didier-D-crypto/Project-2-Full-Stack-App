@@ -6,7 +6,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
     />
-  <link href="stylesheets/style.css" rel="stylesheet" />
+    <link href="stylesheets/style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Saira&display=swap"
       rel="stylesheet"
@@ -53,7 +53,7 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                <!--Start Date Input 1-->
+                  <!--Start Date Input 1-->
                   <input
                     class="input"
                     type="text"
@@ -67,10 +67,10 @@
               </div>
               <div class="field">
                 <p class="control is-expanded has-icons-left has-icons-right">
-                <!--End Date Input 1-->
+                  <!--End Date Input 1-->
                   <input
                     class="input"
-                    type="text"`
+                    type="text"
                     placeholder="End Date"
                     id="end-date"
                   />
@@ -89,7 +89,7 @@
             <div class="field is-expanded">
               <div class="field has-addons">
                 <p class="control is-expanded has-icons-left">
-                    <!--Search City Input-->
+                  <!--Search City Input-->
                   <input
                     class="input"
                     type="text"
@@ -128,7 +128,7 @@
         <div class="column is-4">
           <h1 class="headingItinerary">Events during your trip</h1>
           <p>
-            Sometimes it's hard to plan.  Below are a few things happening during
+            Sometimes it's hard to plan. Below are a few things happening during
             your trip. Use these as suggestions if you want to add onto your
             itinerary!
           </p>
@@ -145,7 +145,7 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control is-expanded has-icons-left">
-                      <!--Itin Start Date-->
+                    <!--Itin Start Date-->
                     <input
                       class="input"
                       type="text"
@@ -159,7 +159,7 @@
                 </div>
                 <div class="field">
                   <p class="control is-expanded has-icons-left has-icons-right">
-                      <!--Itin End Date-->
+                    <!--Itin End Date-->
                     <input
                       class="input"
                       type="text"
@@ -181,7 +181,7 @@
               <div class="field is-expanded">
                 <div class="field has-addons">
                   <p class="control is-expanded has-icons-left">
-                      <!--Itin City Input-->
+                    <!--Itin City Input-->
                     <input
                       class="input"
                       type="text"
@@ -200,9 +200,9 @@
           <div class="field">
             <label class="label">Where are you eating?</label>
             <div class="control">
-                <!--Itin Food Textarea-->
+              <!--Itin Food Textarea-->
               <textarea
-              id="foodTxtArea"
+                id="foodTxtArea"
                 class="textarea"
                 placeholder="Breakfast, Lunch, Dinner"
               ></textarea>
@@ -214,8 +214,9 @@
               >What activities are you doing while you're there?</label
             >
             <div class="control">
-                <!--Itin Activiy Textarea-->
-              <textarea id="itinAct"
+              <!--Itin Activiy Textarea-->
+              <textarea
+                id="itinAct"
                 class="textarea"
                 placeholder="Activities, Sightseeing"
               ></textarea>
@@ -223,24 +224,46 @@
           </div>
 
           <div class="field">
-            <label class="label">Nightlife</label>
+            <label class="label"
+              >Where will you be going for a night out on the town?</label
+            >
             <div class="control">
-            <!--Itin Nightlife Textarea-->
-              <textarea id="itinNight"
+              <!--Itin Nightlife Textarea-->
+              <textarea
+                id="itinNight"
                 class="textarea"
                 placeholder="Parties, Clubs, Bars"
               ></textarea>
             </div>
           </div>
 
+          <div class="field">
+            <label class="label"
+              >Have you done this trip before? If so leave a review for other
+              users!</label
+            >
+            <div class="control">
+              <!--Itin Review Textarea-->
+              <textarea
+                id="itinReview"
+                class="textarea"
+                placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
+              ></textarea>
+            </div>
+          </div>
+
           <div class="field is-grouped">
             <div class="control">
-                <!--Save Button / "Submit" Button-->
-              <button id="saveItinBtn" class="button is-info is-light">Save</button>
+              <!--Save Button / "Submit" Button-->
+              <button id="saveItinBtn" class="button is-info is-light">
+                Save
+              </button>
             </div>
             <div class="control">
-                <!--Email Button-->
-              <button id="emailBtn" class="button is-info is-light">Email</button>
+              <!--Email Button-->
+              <button id="emailBtn" class="button is-info is-light">
+                Email
+              </button>
             </div>
           </div>
         </div>
@@ -252,5 +275,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="formSub.js"></script>
+    <script type="text/javascript" src="itinerary.js"></script>
   </body>
 </html>
