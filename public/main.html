@@ -35,12 +35,14 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title has-text-centered animated bounceIn">
-            Trip Tips
+
+            <i class="fas fa-plane"> </i>Trip Tips
           </h1>
         </div>
       </div>
     </section>
-    <div
+    <!-- <div
+
       class="username"
       style="background-color: lightslategray; padding: 10px"
     >
@@ -51,20 +53,21 @@
       >
         <i class="fas fa-user"></i> Username
       </button>
-    </div>
-    <br /><br /><br />
+
+    </div> -->
+    <br /><br />
 
     <div class="container">
-      <div
-        class="card has-text-centered is-wide main-center-card"
-        style="background-color: lightsteelblue; padding: 50px"
-      >
+      <div class="card has-text-centered is-wide main-center-card">
         We're so excited you're here to plan a trip! <br />
         Look through our exisiting itineraries; they're reviewed by users, or
         create your own!
         <br />
         <div class="field has-addons has-text-centered">
           <div class="control">
+
+            <br />
+
             <input
               class="input"
               id="citySearch"
@@ -73,16 +76,47 @@
             />
           </div>
           <div class="control">
+
+            <br />
+
             <a class="button is-info is-light">
               Search
             </a>
           </div>
+          <div class="buttons" style="padding: 25px">
+            <button class="button is-info is-light create-your-own">
+              Create Your Own
+            </button>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <button
+                  class="button is-info is-light"
+                  style="margin-left: 200px"
+                >
+                  Sign Out
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- search for cities -->
     </div>
-
+    <br /><br />
     <!-- main section -->
+    <div class="container">
+      <div class="card has-text-centered middle-card">
+        <h1 class="heading">itineraries</h1>
+        <div class="itinerary-cards"></div>
+      </div>
+    </div>
+    <br /><br /><br />
+
+    <footer class="footer"></footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

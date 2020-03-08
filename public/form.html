@@ -1,0 +1,244 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Saira&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <title>Trip Tips</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <section
+      class="hero"
+      style="background-color: lightsteelblue; border-bottom: lightslategray 5px solid;"
+    >
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered animated bounceIn">
+            <i class="fas fa-plane"> </i>Trip Tips
+          </h1>
+        </div>
+      </div>
+    </section>
+    <br /><br />
+
+    <div class="container">
+      <div class="card has-text-centered is-wide main-center-card">
+        Enter your travel information below to search for events during your
+        trip, and begin creating your itinerary!
+        <br />
+        <br />
+        <div class="field has-addons has-text-centered">
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Start Date"
+                    id="start-date"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-calendar"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left has-icons-right">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="End Date"
+                    id="end-date"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-calendar"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="help">(YYYY-DD-MM)</p>
+        <br />
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field has-addons">
+                <p class="control is-expanded has-icons-left">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="City"
+                    id="searched-city"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <!-- event api button -->
+                <button class="button is-info is-light" id="event-search">
+                  Search for Events
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div
+        class="columns is-multiline is-mobile"
+        style="background-color: lightsteelblue;"
+      >
+        <div class="column is-2"></div>
+        <div class="column is-4">
+          <h1 class="headingItinerary">Events during your trip</h1>
+          <p>
+            Sometimes its hard to plan, below are a few things happening during
+            your trip. Use these as suggestions if you want to add onto your
+            itinerary!
+          </p>
+          <div id="event-response"></div>
+        </div>
+        <div class="column is-1 has-text-centered"></div>
+        <div class="column is-4">
+          <h1 class="headingItinerary">Your itinerary</h1>
+          <!-- input form -->
+          <br />
+          <label class="label">When is your trip?</label>
+          <div class="field has-addons has-text-centered">
+            <div class="field is-horizontal">
+              <div class="field-body">
+                <div class="field">
+                  <p class="control is-expanded has-icons-left">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Start Date"
+                      id="start-date"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-calendar"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control is-expanded has-icons-left has-icons-right">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="End Date"
+                      id="end-date"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-calendar"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Where are you going?</label>
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field has-addons">
+                  <p class="control is-expanded has-icons-left">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="City"
+                      id="searched-city"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-globe"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Where are you eating?</label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                placeholder="Breakfast, Lunch, Dinner"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label"
+              >What activities are you doing while you're there?</label
+            >
+            <div class="control">
+              <textarea
+                class="textarea"
+                placeholder="Activities, Sightseeing"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Nightlife</label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                placeholder="Parties, Clubs, Bars"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-info is-light">Save</button>
+            </div>
+            <div class="control">
+              <button class="button is-info is-light">Email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br />
+
+    <footer class="footer"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/itinerary.js"></script>
+  </body>
+</html>
