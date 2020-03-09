@@ -31,31 +31,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  /* Added 3/9/19 below: 3 Files */
-
-  app.get("/form", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/form.html"));
-  });
-
-  /* This path used to be members.html */
-
-  app.get("/index", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
-
-  /* This path used to be members.html */
-
-  app.get("/main", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/main.html"));
+  app.get("/itinerary", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/itinerary.html"));
   });
 };
 
-/* "/members" brings me to login page. */
-/* "/form" brings me to form page. */
-/* "/index" brings me to sign-up page. */
-/* "/main" brings me to city-search/Itineraries page */
-
-/* "/signin" brings user to Error Page */
-/* "/login" shows a 'no such directory' message */
 
 
