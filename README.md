@@ -10,8 +10,8 @@
          POST is used for submit information
          -Check out Jotform
    
-[] Must be deployed using Heroku (with data)
-         -deployed by her
+[x] Must be deployed using Heroku (with data)
+         
 
 [x] Must utilize at least one new third-party API
    -Places API
