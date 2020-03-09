@@ -16,27 +16,27 @@ const Cities = require("./models").Cities;
 // console.log(User);
 // console.log(Itineraries);
 
-User.create({
-  email: "d@d.com", 
-  password: "abab"
-});
+// User.create({
+//   email: "d@d.com", 
+//   password: "abab"
+// });
 
-Itineraries.create({
-    start_date: '2019-03-06',
-    end_date: '2019-03-09',
-    city: "Made up",
-    food: "this",
-    activities: "this",
-    nigthtime: "this",
-    reviews: "Awesome!!",
-    user_id: '1',
-    city_id: '2'
-  });
+// Itineraries.create({
+//     start_date: '2019-03-06',
+//     end_date: '2019-03-09',
+//     city: "Made up",
+//     food: "this",
+//     activities: "this",
+//     nigthtime: "this",
+//     reviews: "Awesome!!",
+//     user_id: '1',
+//     city_id: '2'
+//   });
 
-Cities.create({
-  name: "Philadelphia",
-  itinerary_id: 2
-})
+// Cities.create({
+//   name: "Philadelphia",
+//   itinerary_id: 2
+// })
 
 
 // Creating express app and configuring middleware needed for authentication
