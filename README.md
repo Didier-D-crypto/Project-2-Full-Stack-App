@@ -13,8 +13,7 @@
 [] Must be deployed using Heroku (with data)
          -deployed by her
 
-[] Must utilize at least one new third-party API
-   -Brush up skills on Third Party APIs
+[x] Must utilize at least one new third-party API
    -Places API
 
 [] Must have a polished UI
