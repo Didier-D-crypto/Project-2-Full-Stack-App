@@ -9,20 +9,32 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
+
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isEmail: true
-      }
+      },
+    
     },
     // The password cannot be null
     password: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: true,
+    },
+    createdAt: {
+      field: 'created_at',
+      type: DataTypes.DATE,
+
+  },
+  updatedAt: {
+      field: 'updated_at',
+      type: DataTypes.DATE,
+      
+  }
   });
 
   //User.associate = (models) => User.hasMany(models.Itineraries);
