@@ -16,6 +16,7 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "bcryptjs": "2.4.3",
+    "bulma-calendar": "^6.0.7",
     "express": "^4.17.0",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.1",
