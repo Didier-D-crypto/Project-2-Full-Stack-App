@@ -15,6 +15,12 @@ textarea {
 .card.is-wide {
   width: 550px;
 }
+
+.card-content,
+.card {
+  background-color: thistle;
+  margin: 10px;
+}
 .create-your-own {
   font-family: "Cardo", serif;
 }
