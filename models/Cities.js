@@ -8,16 +8,16 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     name: DataTypes.STRING,
-    itinerary_id: {
+    itineraries_id: {
       type: DataTypes.INTEGER,
       required: true,
-      allowNull: false
+      allowNull: true
     }
   });
   Cities.associate = (models) => {
     Cities.hasMany(models.Itineraries), {
       foreignKey: { 
-        allowNull: false
+        allowNull: true
       }
     }
   };
