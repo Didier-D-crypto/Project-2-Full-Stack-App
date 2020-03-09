@@ -12,25 +12,25 @@ module.exports = (sequelize, DataTypes) => {
     city: DataTypes.STRING,
     food: DataTypes.STRING,
     activities: DataTypes.STRING,
-    nigthtime: DataTypes.STRING,
+    nighttime: DataTypes.STRING,
     reviews: DataTypes.STRING, 
     user_id: {
       type: DataTypes.INTEGER, 
       /* added 3/7/19*/
       required: true,
-      allowNull: false
+      allowNull: true
     },
     city_id: {
     type: DataTypes.INTEGER,
     required: true,
-    allowNull: false
+    allowNull: true
     }
   });
 
   Itineraries.associate = (models) => {    
     Itineraries.belongsTo(models.User), {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     }
     Itineraries.associate = (models) => {
