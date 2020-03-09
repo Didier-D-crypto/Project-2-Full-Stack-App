@@ -1,6 +1,116 @@
+html {
+  background-image: url("../img/9L1l4W.jpg");
+
+  font-family: "Cardo", serif;
+  /* font-family: "Open Sans Condensed", sans-serif; */
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Cardo", serif;
+}
+
+.card.is-wide {
+  width: 550px;
+}
+
+.card-content,
+.card {
+  background-color: thistle;
+  margin: 10px;
+}
+
+.create-your-own {
+  font-family: "Cardo", serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Saira", sans-serif;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 70px;
+  letter-spacing: 15px;
+  color: midnightblue;
+}
+
+.main-center-card {
+  margin: 0px 375px 0px 375px;
+  color: midnightblue;
+  background-color: lightsteelblue;
+  padding: 30px;
+}
+
+.middle-card {
+  background-color: lightsteelblue;
+  padding: 15px 50px 15px 50px;
+  width: 960px;
+  margin-left: 200px;
+}
+
+.card-header {
+  padding: 1.75rem 0;
+  background-color: lightsteelblue;
+}
+
+.card-content {
+  padding: 50px;
+  background-color: lightsteelblue;
+}
+
+.heading {
+  font-size: 45px;
+  letter-spacing: 10px;
+  color: midnightblue;
+}
+
+.headingItinerary {
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: midnightblue;
+}
+
+.footer {
+  padding: 25px;
+  background-color: midnightblue;
+  border-top: lightslategray 5px solid;
+  color: lightsteelblue;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
 }
 
+<<<<<<< HEAD
 
+=======
+@media (max-width: 576px) {
+  .main-center-card,
+  .middle-card {
+    margin: auto;
+  }
+
+  .middle-card {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .main-center-card,
+  .middle-card {
+    margin: auto;
+  }
+  .middle-card {
+    width: auto;
+  }
+}
+>>>>>>> 9b741ec803970e00e7ff076de8c51c6ac9df6e07
