@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
     },
     start_date: DataTypes.DATE,
     end_date: DataTypes.DATE,
@@ -18,13 +18,26 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER, 
       /* added 3/7/19*/
       required: true,
-      allowNull: true
+      allowNull: true,
+
     },
     city_id: {
     type: DataTypes.INTEGER,
     required: true,
-    allowNull: true
-    }
+    allowNull: true,
+   
+    },
+    createdAt: {
+      field: 'created_at',
+      type: DataTypes.DATE,
+
+  },
+  updatedAt: {
+      field: 'updated_at',
+      type: DataTypes.DATE,
+
+  }
+    
   });
 
   Itineraries.associate = (models) => {    
