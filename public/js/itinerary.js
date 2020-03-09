@@ -15,7 +15,6 @@ const itinNight = $("#itinNight");
 const saveItinBtn = $("#saveItinBtn");
 const emailBtn = $("#emailBtn");
 
-
 $(saveItinBtn).on("click", event => {
   let newItin = {
     start_date: $(itinStartDate).val(),
@@ -42,8 +41,6 @@ $(eventSrchBtn).on("click", event => {
 
   eventAJAX(newStartDate, newEndDate, city);
 });
-
-
 
 function eventAJAX(newStartDate, newEndDate, city) {
   event.preventDefault();
