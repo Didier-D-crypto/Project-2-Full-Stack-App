@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     itineraries_id: {
       type: DataTypes.INTEGER,
       required: true,
+<<<<<<< HEAD
       allowNull: true,
     },
     createdAt: {
@@ -25,6 +26,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
 
   }
+
+    
+
   });
   Cities.associate = (models) => {
     Cities.hasMany(models.Itineraries), {

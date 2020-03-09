@@ -18,12 +18,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER, 
       /* added 3/7/19*/
       required: true,
+<<<<<<< HEAD
       allowNull: true,
 
     },
     city_id: {
     type: DataTypes.INTEGER,
     required: true,
+<<<<<<< HEAD
     allowNull: true,
    
     },

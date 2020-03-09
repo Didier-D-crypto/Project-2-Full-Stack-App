@@ -91,6 +91,9 @@ form.login {
   margin-top: 50px;
 }
 
+<<<<<<< HEAD
+
+=======
 @media (max-width: 576px) {
   .main-center-card,
   .middle-card {
@@ -110,3 +113,4 @@ form.login {
     width: auto;
   }
 }
+>>>>>>> 9b741ec803970e00e7ff076de8c51c6ac9df6e07

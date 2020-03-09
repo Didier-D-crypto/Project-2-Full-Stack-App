@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Trip Tips-Sign Up</title>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trip Tips</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
@@ -18,6 +18,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
     />
 
+<<<<<<< HEAD
+<head>
+  <title>Passport Authentication</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  
+</head>
+=======
     <link
       href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald"
       rel="stylesheet"
@@ -27,16 +37,21 @@
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
   </head>
-
   <body>
     <section class="section">
       <div class="container" style="margin-left: 375px">
         <div class="card has-text-centered is-wide">
           <div class="card-content">
-            <h1 class="heading">Sign Up Form</h1>
+            <h1 class="heading animated bounce">
+              <i class="fas fa-plane"> </i>Trip Tips
+            </h1>
+>>>>>>> 9b741ec803970e00e7ff076de8c51c6ac9df6e07
 
-            <form class="signup">
+            <h2 class="animated flipInY delay-1s">slogan</h2>
+            <br />
+            <form class="login animated fadeIn delay-2s">
               <div class="field">
+                to get started, please log in.
                 <br />
                 <p class="control has-icons-left has-icons-right">
                   <input
@@ -69,30 +84,18 @@
               <div class="field">
                 <p class="control">
                   <button class="button is-info is-light" type="submit">
-                    Sign Up
+                    Login
                   </button>
                 </p>
               </div>
-              <div
-                style="display: none"
-                id="alert"
-                class="alert alert-danger"
-                role="alert"
-              >
-                <span
-                  class="glyphicon glyphicon-exclamation-sign"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Error:</span> <span class="msg"></span>
-              </div>
-              <p>Or log in <a href="/">here</a></p>
+              <p>Or sign up <a href="/signup">here</a></p>
             </form>
+            <br />
           </div>
         </div>
       </div>
     </section>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/signup.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
   </body>
 </html>
