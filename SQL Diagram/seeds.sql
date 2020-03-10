@@ -13,7 +13,6 @@ CREATE TABLE Cities (
 CREATE TABLE Users (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255),
-
 )
 
 CREATE TABLE Itineraries (
@@ -24,12 +23,8 @@ CREATE TABLE Itineraries (
     food VARCHAR (255),
     activities VARCHAR (255),
     nighttime VARCHAR (255),
-    reviews VARCHAR (255)
-
-  
+    reviews VARCHAR (255)  
 );
-
-
 
 INSERT INTO Cities (id, name ) VALUES (1,"San Fransico ");
 INSERT INTO Cities (id, name ) VALUES (2, "Las Vagas ");
