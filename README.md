@@ -16,8 +16,8 @@
 [x] Must utilize at least one new third-party API
    
 
-[] Must have a polished UI
-    -Sean Implemented UI 
+[x] Must have a polished UI
+    
 
 [] Must use a CSS framework other than Bootstrap
     -Bulma
