@@ -8,7 +8,7 @@
       
 [x] Must utilize both GET and POST routes for retrieving and adding new data
          POST is used for submit information
-         -Check out Jotform
+       
    
 [x] Must be deployed using Heroku (with data)
          
