@@ -20,7 +20,7 @@
     
 
 [] Must use a CSS framework other than Bootstrap
-    -Bulma
+   
      
 [x] Must follow MVC paradigm |file structure
  
