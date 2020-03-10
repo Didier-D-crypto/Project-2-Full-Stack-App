@@ -26,6 +26,11 @@ textarea {
   background-color: thistle;
 }
 
+.card-subhead {
+  color: midnightblue;
+  font-weight: bold;
+}
+
 .create-your-own {
   font-family: "Cardo", serif;
 }
