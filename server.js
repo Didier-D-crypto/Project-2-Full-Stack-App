@@ -17,28 +17,28 @@ const Cities = require("./models").Cities;
 // console.log(Itineraries);
 
 // User.create({
-//   email: "d@d.com", 
-//   password: "abab"
+//   email: "f@f.com", 
+//   password: "f"
 // });
 
 // Itineraries.create({
 //     start_date: '2019-03-06',
 //     end_date: '2019-03-09',
-//     city: "Made up",
-//     food: "this",
-//     activities: "this",
-//     nigthtime: "this",
-//     reviews: "Awesome!!",
-//     user_id: '1',
-//     city_id: '2'
+//     city: "F",
+//     food: "f",
+//     activities: "f",
+//     nigthtime: "f",
+//     reviews: "f",
+//     user_id: '5',
+//     city_id: '5'
 //   });
 
-// Cities.create({
-//   name: "Philadelphia",
-//   itinerary_id: 2
-// })
-
-// extra line
+// Cities.create(
+// {
+//   name: "F",
+//   itineraries_id: 5
+// }
+// );
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
