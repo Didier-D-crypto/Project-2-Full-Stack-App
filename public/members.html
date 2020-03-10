@@ -25,6 +25,7 @@
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
     <title>Trip Tips</title>
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
   </head>
   <body>
     <!-- navbar -->
@@ -40,18 +41,6 @@
         </div>
       </div>
     </section>
-    <!-- <div
-      class="username"
-      style="background-color: lightslategray; padding: 10px"
-    >
-      <button
-        class="button is-info is-light"
-        id="getProfile"
-        style="margin-left: 1050px;"
-      >
-        <i class="fas fa-user"></i> Username
-      </button>
-    </div> -->
     <br /><br />
 
     <div class="container">
@@ -79,21 +68,25 @@
             </a>
           </div>
           <div class="buttons" style="padding: 25px">
-            <a id="itinTransition" href="/itinerary"><button class="button is-info is-light create-your-own">
-              Create Your Own
-            </button></a>
+            <a id="itinTransition" href="/itinerary"
+              ><button class="button is-info is-light create-your-own">
+                Create Your Own
+              </button></a
+            >
           </div>
         </div>
         <div class="field is-horizontal">
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <a id="signOut" href="/login"><button
-                  class="button is-info is-light"
-                  style="margin-left: 200px"
+                <a id="signOut" href="/login"
+                  ><button
+                    class="button is-info is-light"
+                    style="margin-left: 200px"
+                  >
+                    Sign Out
+                  </button></a
                 >
-                  Sign Out
-                </button></a>
               </div>
             </div>
           </div>
@@ -105,10 +98,57 @@
     <div class="container">
       <div class="card has-text-centered middle-card">
         <h1 class="heading">itineraries</h1>
-        <div class="itinerary-cards"></div>
+        <div class="itinerary-cards">
+          <!-- itinerary card input -->
+          <div class="tile is-ancestor itin-card">
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title">
+                  <i class="fas fa-map-marker-alt"></i> Las Vegas
+                </p>
+                <p class="subtitle">start-end</p>
+                <p>food, fun, party</p>
+                <p>click here to view the itinerary</p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title">
+                  <i class="fas fa-map-marker-alt"></i> Orlando
+                </p>
+                <p class="subtitle">start-end</p>
+                <p>food, fun, party</p>
+                <p>click here to view the itinerary</p>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-ancestor">
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title">
+                  <i class="fas fa-map-marker-alt"></i> Boston
+                </p>
+                <p class="subtitle">start-end</p>
+                <p>food, fun, party</p>
+                <p>click here to view the itinerary</p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title">
+                  <i class="fas fa-map-marker-alt"></i> New York
+                </p>
+                <p class="subtitle">start-end</p>
+                <p>food, fun, party</p>
+                <p>click here to view the itinerary</p>
+              </article>
+            </div>
+          </div>
+          <!-- end cards -->
+        </div>
       </div>
     </div>
-    <br /><br /><br />
+    <br /><br />
 
     <footer class="footer"></footer>
 

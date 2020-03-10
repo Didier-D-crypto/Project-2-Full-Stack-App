@@ -22,6 +22,10 @@ textarea {
   margin: 10px;
 }
 
+.tile.is-child {
+  background-color: thistle;
+}
+
 .create-your-own {
   font-family: "Cardo", serif;
 }
@@ -33,7 +37,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Saira", sans-serif;
+  font-family: "Cardo", serif;
   font-size: 20px;
 }
 
@@ -41,6 +45,13 @@ h2 {
   font-size: 70px;
   letter-spacing: 15px;
   color: midnightblue;
+}
+p.title {
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 10px;
 }
 
 .main-center-card {
