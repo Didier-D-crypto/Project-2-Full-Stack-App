@@ -13,13 +13,13 @@ module.exports = (sequelize, DataTypes) => {
     activities: DataTypes.STRING,
     nighttime: DataTypes.STRING,
     reviews: DataTypes.STRING,
-    user_id: {
+    userId: {
       type: DataTypes.INTEGER,
       /* added 3/7/19*/
       required: true,
       allowNull: true
     },
-    city_id: {
+    cityId: {
       type: DataTypes.INTEGER,
       required: true,
       allowNull: true

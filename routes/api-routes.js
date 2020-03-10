@@ -59,11 +59,11 @@ module.exports = function(app) {
     });
 
 
-  // app.get("/api/itineraries", (req, res) =>{
-  //   db.Itineraries.findAll({}).then(dbItin => {
-  //     res.json(dbItin);
-  //   });
-  // });
+  app.get("/api/itineraries", (req, res) =>{
+    db.Itineraries.findAll({}).then(dbItin => {
+      res.json(dbItin);
+    });
+  });
 
   // app.get("/api/users1", (req,res) => {
   //   db.User.findAll({

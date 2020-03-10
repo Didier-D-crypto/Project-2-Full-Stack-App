@@ -15,6 +15,10 @@ const itinNight = $("#itinNight");
 const saveItinBtn = $("#saveItinBtn");
 const emailBtn = $("#emailBtn");
 
+$.get("/api/itineraries", {
+}).then(function() {
+});
+
 $(saveItinBtn).on("click", event => {
   let newItin = {
     start_date: $(itinStartDate).val(),
