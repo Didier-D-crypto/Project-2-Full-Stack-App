@@ -24,17 +24,7 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: true,
-    },
-    createdAt: {
-      field: 'created_at',
-      type: DataTypes.DATE,
-
-  },
-  updatedAt: {
-      field: 'updated_at',
-      type: DataTypes.DATE,
-      
-  }
+    }
   });
 
   //User.associate = (models) => User.hasMany(models.Itineraries);
