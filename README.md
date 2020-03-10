@@ -11,11 +11,10 @@
          -Check out Jotform
    
 [] Must be deployed using Heroku (with data)
-         -deployed by her
+         
 
-[] Must utilize at least one new third-party API
-   -Brush up skills on Third Party APIs
-   -Places API
+[x] Must utilize at least one new third-party API
+   
 
 [] Must have a polished UI
     -Sean Implemented UI 
