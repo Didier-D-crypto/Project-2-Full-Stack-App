@@ -12,14 +12,6 @@ module.exports = (sequelize, DataTypes) => {
       required: true,
       allowNull: true
     },
-    createdAt: {
-      field: "created_at",
-      type: DataTypes.DATE
-    },
-    updatedAt: {
-      field: "updated_at",
-      type: DataTypes.DATE
-    }
   });
   Cities.associate = models => {
     Cities.hasMany(models.Itineraries),
