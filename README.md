@@ -31,4 +31,4 @@
    -Handlebars are now optional to use
 
 []Hide API Keys 
-Travis Linting to be implemented-
+    
