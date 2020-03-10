@@ -38,6 +38,7 @@ const Cities = require("./models").Cities;
 //   itinerary_id: 2
 // })
 
+// extra line
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
