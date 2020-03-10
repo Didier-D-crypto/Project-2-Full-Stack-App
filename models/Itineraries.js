@@ -1,11 +1,10 @@
-
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  const Itineraries = sequelize.define('Itineraries', {
+  const Itineraries = sequelize.define("Itineraries", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true,
+      primaryKey: true
     },
     start_date: DataTypes.DATE,
     end_date: DataTypes.DATE,
@@ -13,44 +12,37 @@ module.exports = (sequelize, DataTypes) => {
     food: DataTypes.STRING,
     activities: DataTypes.STRING,
     nighttime: DataTypes.STRING,
-    reviews: DataTypes.STRING, 
+    reviews: DataTypes.STRING,
     user_id: {
-      type: DataTypes.INTEGER, 
+      type: DataTypes.INTEGER,
       /* added 3/7/19*/
       required: true,
-<<<<<<< HEAD
-      allowNull: true,
-
+      allowNull: true
     },
     city_id: {
-    type: DataTypes.INTEGER,
-    required: true,
-<<<<<<< HEAD
-    allowNull: true,
-   
+      type: DataTypes.INTEGER,
+      required: true,
+      allowNull: true
     },
     createdAt: {
-      field: 'created_at',
-      type: DataTypes.DATE,
-
-  },
-  updatedAt: {
-      field: 'updated_at',
-      type: DataTypes.DATE,
-
-  }
-    
+      field: "created_at",
+      type: DataTypes.DATE
+    },
+    updatedAt: {
+      field: "updated_at",
+      type: DataTypes.DATE
+    }
   });
 
-  Itineraries.associate = (models) => {    
-    Itineraries.belongsTo(models.User), {
-      foreignKey: {
-        allowNull: true
-      }
-    }
-    Itineraries.associate = (models) => {
-      Itineraries.hasMany(models.Cites, {
-      });
+  Itineraries.associate = models => {
+    Itineraries.belongsTo(models.User),
+      {
+        foreignKey: {
+          allowNull: true
+        }
+      };
+    Itineraries.associate = models => {
+      Itineraries.hasMany(models.Cites, {});
     };
   };
   return Itineraries;
