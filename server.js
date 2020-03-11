@@ -1,4 +1,5 @@
 // Requiring necessary npm packages
+require('dotenv').config()
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -13,32 +14,8 @@ const db = require("./models");
 const User = require("./models").User;
 const Itineraries = require("./models").Itineraries;
 const Cities = require("./models").Cities;
-// console.log(User);
-// console.log(Itineraries);
+const mailer = require('./nodemailer');
 
-// User.create({
-//   email: "f@f.com", 
-//   password: "f"
-// });
-
-// Itineraries.create({
-//     start_date: '2019-03-06',
-//     end_date: '2019-03-09',
-//     city: "F",
-//     food: "f",
-//     activities: "f",
-//     nigthtime: "f",
-//     reviews: "f",
-//     user_id: '5',
-//     city_id: '5'
-//   });
-
-// Cities.create(
-// {
-//   name: "F",
-//   itineraries_id: 5
-// }
-// );
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
