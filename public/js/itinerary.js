@@ -55,27 +55,26 @@ function eventAJAX(newStartDate, newEndDate, city) {
     url: searchurl,
     dataType: "jsonp",
     method: "POST"
-  }).done(function(response) {
-    console.log(response);
-    // console.log(response.events.event);
-    // if (response.status === 400 || response.events.length === 0) {
-    //   return $(".error-message").text(
-    //     "No events found! Try again"
-    //   );
-    // }
-    for (i = 0; i < response.events.event.length; i++) {
-      let title = response.events.event[i].title;
-      let address = response.events.event[i].venue_address;
-      let start = response.events.event[i].start_time;
-      let formatStart = moment(start).format("LLL");
-      let end = response.events.event[i].stop_time;
-      let formatEnd = moment(end).format("LLL");
-      let url = response.events.event[i].url;
-      let cityname = response.events.event[i].city_name;
-      let region = response.events.event[i].region_name;
+  })
+    .done(function(response) {
+      console.log(response);
+      // console.log(response.events.event);
+      if (response.status === 400 || response.events.length === 0) {
+        return $(".error-message").text("Oh No! No Events Found, Try Again.");
+      }
+      for (i = 0; i < response.events.event.length; i++) {
+        let title = response.events.event[i].title;
+        let address = response.events.event[i].venue_address;
+        let start = response.events.event[i].start_time;
+        let formatStart = moment(start).format("LLL");
+        let end = response.events.event[i].stop_time;
+        let formatEnd = moment(end).format("LLL");
+        let url = response.events.event[i].url;
+        let cityname = response.events.event[i].city_name;
+        let region = response.events.event[i].region_name;
 
-      var newCard = $(`<div class="card">`)
-        .html(`      <div class="card-content" style="background-color: thistle;">
+        var newCard = $(`<div class="card">`)
+          .html(`      <div class="card-content" style="background-color: thistle;">
       <div class="content"><h1>${title}</h1>
         <p>
          Event begins: ${formatStart}
@@ -89,7 +88,10 @@ function eventAJAX(newStartDate, newEndDate, city) {
     </div>
     </div>
     <br />`);
-      $("#event-response").append(newCard);
-    }
-  });
+        $("#event-response").append(newCard);
+      }
+    })
+    .catch(function() {
+      return $(".error-message").text("Oh No! No Events Found, Try Again.");
+    });
 }
