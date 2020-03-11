@@ -78,235 +78,47 @@
         <h1 class="heading">itineraries</h1>
         <div class="itinerary-cards">
           <!-- itinerary card input -->
-          <div class="tile is-ancestor itin-card">
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">
-                  <i class="fas fa-map-marker-alt"></i> Las Vegas
-                </p>
-                <p class="subtitle">09/20/19-09/24/19</p>
-                <p class="card-subhead">Food:</p>
-                Kabuto-edomae Shusi
-                <p class="card-subhead">Activites:</p>
-                High Roller Observation Wheel
-                <p class="card-subhead">Nightlife:</p>
-                EBC at Night & TAO
-                <p class="card-subhead">Reviews:</p>
-                <p>
-                  When I booked a flight to Vegas for my 27th this came in soo
-                  clutch my guy.
-                </p>
-                <br />
-                <div class="field">
-                  <label class="label"
-                    >Have you used this itinerary? If so leave a review.</label
-                  >
-                  <div class="control">
-                    <!--Itin Review Textarea-->
-                    <textarea
-                      id="itinReviewPost"
-                      class="textarea"
-                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                    ></textarea>
-                    <button id="postReview" class="button is-info is-light">
-                      Post My Review
-                    </button>
-                  </div>
+          <br />
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">
+                <i class="fas fa-map-marker-alt"></i> Las Vegas
+              </p>
+              <p class="subtitle">09/20/19-09/24/19</p>
+              <p class="card-subhead">Food:</p>
+              Kabuto-edomae Shusi
+              <p class="card-subhead">Activites:</p>
+              High Roller Observation Wheel
+              <p class="card-subhead">Nightlife:</p>
+              EBC at Night & TAO
+              <p class="card-subhead">Reviews:</p>
+              <p>
+                When I booked a flight to Vegas for my 27th this came in soo
+                clutch my guy.
+              </p>
+              <div id="addReview">
+                <!-- NEW REVIEW POSTED HERE -->
+              </div>
+              <br />
+              <div class="field">
+                <label class="label"
+                  >Have you used this itinerary? If so leave a review.</label
+                >
+                <div class="control">
+                  <!--Itin Review Textarea-->
+                  <textarea
+                    id="las-vegas"
+                    class="textarea"
+                    placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
+                  ></textarea>
+                  <button id="postReview" class="button is-info is-light">
+                    Post My Review
+                  </button>
                 </div>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">
-                  <i class="fas fa-map-marker-alt"></i> San Francisco
-                </p>
-                <p class="subtitle">03/10/19-03/17/19</p>
-                <p class="card-subhead">Food:</p>
-                Lazy Bear & Bubba Gump Shrimp & Ghiradellis
-                <p class="card-subhead">Activites:</p>
-                Visit Fishermans Wharf
-                <p class="card-subhead">Nightlife:</p>
-                F8 Nightclub & Bar
-                <p class="card-subhead">Reviews:</p>
-                <p>
-                  I was in San Fran for work and a fellow colleague of mines
-                  followed this exact itinerary durring our trip in the hopes of
-                  wooing me ( SPOLIER ALERT....It worked). He invited me out to
-                  Fishermans Wharf which is a neighborhood filled with national
-                  parks, museums and beautiful people. I must say I had a blast.
-                  He then took me to the Lazy Bear, OMG SOO GOOD!!!! The food,
-                  the ambiance incredible. And the F8 Nightclub & Bar was
-                  perfect addition to the trip they mostly play house & techno
-                  music which I freaking love. Overall 5 stars !!!! Great job
-                  Troy, now its my turn to woo you in Jersey :)
-                </p>
-                <br />
-                <div class="field">
-                  <label class="label"
-                    >Have you used this itinerary? If so leave a review.</label
-                  >
-                  <div class="control">
-                    <!--Itin Review Textarea-->
-                    <textarea
-                      id="itinReviewPost"
-                      class="textarea"
-                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                    ></textarea>
-                    <button id="postReview" class="button is-info is-light">
-                      Post My Review
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="tile is-ancestor">
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">
-                  <i class="fas fa-map-marker-alt"></i> Atlanta
-                </p>
-                <p class="subtitle">01/08/20-01/10/20</p>
-                <p class="card-subhead">Food:</p>
-                Babette's Cafe
-                <p class="card-subhead">Activites:</p>
-                North Georgia Wine Country Tour
-                <p class="card-subhead">Nightlife:</p>
-                Koo Koo Room
-                <p class="card-subhead">Reviews:</p>
-                <p></p>
-                <br />
-                <div class="field">
-                  <label class="label"
-                    >Have you used this itinerary? If so leave a review.</label
-                  >
-                  <div class="control">
-                    <!--Itin Review Textarea-->
-                    <textarea
-                      id="itinReviewPost"
-                      class="textarea"
-                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                    ></textarea>
-                    <button id="postReview" class="button is-info is-light">
-                      Post My Review
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">
-                  <i class="fas fa-map-marker-alt"></i> New Orleans
-                </p>
-                <p class="subtitle">05/25/19-05/30/19</p>
-                <p class="card-subhead">Food:</p>
-                GW Fin's & Cafe Du Monde
-                <p class="card-subhead">Activites:</p>
-                Frenchmen Street Live Music Pub Crawl
-                <p class="card-subhead">Nightlife:</p>
-                Frenchmen Street Live Music Pub Crawl
-                <p class="card-subhead">Reviews:</p>
-                <p>
-                  BEST. BEIGNETS. EVER.
-                </p>
-                <br />
-                <div class="field">
-                  <label class="label"
-                    >Have you used this itinerary? If so leave a review.</label
-                  >
-                  <div class="control">
-                    <!--Itin Review Textarea-->
-                    <textarea
-                      id="itinReviewPost"
-                      class="textarea"
-                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                    ></textarea>
-                    <button id="postReview" class="button is-info is-light">
-                      Post My Review
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <!-- NEW ROW -->
-          <div class="tile is-ancestor">
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title"><i class="fas fa-map-marker-alt"></i> Miami</p>
-                <p class="subtitle">06/06/19-06/10/19</p>
-                <p class="card-subhead">Food:</p>
-                Wart at the Rooftop
-                <p class="card-subhead">Activites:</p>
-                South beach/Vizcaya Museum
-                <p class="card-subhead">Nightlife:</p>
-                Clevelander & Dirty Rabbit
-                <p class="card-subhead">Reviews:</p>
-                <p>
-                  We did this itinerary for a bachelorette party! Love the
-                  Clevelander, ask for Tony he hooked us up!
-                </p>
-                <br />
-                <div class="field">
-                  <label class="label"
-                    >Have you used this itinerary? If so leave a review.</label
-                  >
-                  <div class="control">
-                    <!--Itin Review Textarea-->
-                    <textarea
-                      id="itinReviewPost"
-                      class="textarea"
-                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                    ></textarea>
-                    <button id="postReview" class="button is-info is-light">
-                      Post My Review
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                <p class="title">
-                  <i class="fas fa-map-marker-alt"></i> Orlando
-                </p>
-                <p class="subtitle">10/13/19-10/15/19</p>
-                <p class="card-subhead">Food:</p>
-                LeCellier Steakhouse & California Grill
-                <p class="card-subhead">Activites:</p>
-                Disney World & Universal Studios
-                <p class="card-subhead">Nightlife:</p>
-                The Courtesy & Aku Aku Tiki Bar
-                <p class="card-subhead">Reviews:</p>
-                <p>
-                  My wife is a huge disney lover, i surprised her and took her
-                  here for her 40th birthday. We had a great time at The
-                  Courtesy, great music and drinks.
-                </p>
-                <br />
-                <div class="field">
-                  <label class="label"
-                    >Have you used this itinerary? If so leave a review.</label
-                  >
-                  <div class="control">
-                    <!--Itin Review Textarea-->
-                    <textarea
-                      id="itinReviewPost"
-                      class="textarea"
-                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                    ></textarea>
-                    <button id="postReview" class="button is-info is-light">
-                      Post My Review
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </div>
+              </div>
+            </article>
           </div>
           <!-- end cards -->
-          <!-- NEW ROW -->
         </div>
       </div>
     </div>
