@@ -76,9 +76,9 @@
     <div class="container animated fadeIn delay-1s">
       <div class="card has-text-centered middle-card">
         <h1 class="heading">itineraries</h1>
+        <br />
         <div class="itinerary-cards">
-          <!-- itinerary card input -->
-          <br />
+          <!-- itinerary card input just an example **** DYNAMICALLY CREATED BY AJAX CALL TO OUR DB -->
           <div class="tile is-parent">
             <article class="tile is-child box">
               <p class="title">
@@ -97,7 +97,7 @@
                 clutch my guy.
               </p>
               <div id="addReview">
-                <!-- NEW REVIEW POSTED HERE -->
+                <!-- *****NEW REVIEW POSTED HERE**** -->
               </div>
               <br />
               <div class="field">
@@ -106,14 +106,16 @@
                 >
                 <div class="control">
                   <!--Itin Review Textarea-->
-                  <textarea
-                    id="las-vegas"
-                    class="textarea"
-                    placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                  ></textarea>
-                  <button id="postReview" class="button is-info is-light">
-                    Post My Review
-                  </button>
+                  <form id="itinRevInput">
+                    <textarea
+                      id="las-vegas"
+                      class="textarea"
+                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
+                    ></textarea>
+                    <button id="postReview" class="button is-info is-light">
+                      Post My Review
+                    </button>
+                  </form>
                 </div>
               </div>
             </article>
