@@ -123,11 +123,12 @@ module.exports = function (app) {
   });
 
   // Post route for saving Itineraries
-  // app.post('api/itineraries', (req, res) => {
-  //   db.Itineraries.create(req.body).then(dbItin => {
-  //     res.json(dbItin);
-  //   });
-  // });
+  // was: itineraries; now: newItin
+  app.post('/api/itineraries', (req, res) => {
+    db.Itineraries.create(req.body).then(dbItin => {
+      res.json(dbItin);     
+    });
+  });
 
   // DELETE route for deleting Itineraries
   // app.delete("api/itineraries/:id", (req, res) => {
