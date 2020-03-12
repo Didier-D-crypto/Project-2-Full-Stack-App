@@ -52,6 +52,42 @@ module.exports = function(app) {
     }
   });
 
+  app.post("/send", (req,res) => {
+    const nodemailer = require("nodemailer");
+    let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "malabobby223@gmail.com", // generated ethereal user
+      pass: "1970swascool" // generated ethereal password
+    }
+  });
+  
+  transporter.sendMail({
+    from: "malabobby223@gmail.com", // sender address
+    to: "malabobby223@gmail.com", // list of receivers
+    subject: "Hello ✔",
+    html:  ` <p>You have a new contact request</p>
+    //        <h3>Contact Details</h3>
+    //        <ul>  
+    //          <li>Name:Tom is cool</li>
+    //          <li>Company: i love LA </li>
+    //          <li>Email: ASDGFDSA@gmail.com</li>
+    //          <li>Phone:215778900</li>
+    //        </ul>
+    //        <h3>Message</h3>
+    //        <p>a yo</p>;`
+  }, function (err) {
+      if (err) {
+          console.log(err)
+      } else {
+        console.log("--------------");
+        console.log("--------------");
+        console.log("--------------");
+        console.log("--------------");
+      }
+  });
+  })
+
   /* Added 3/10/19 */
 
   /* Finding All Users */
