@@ -31,5 +31,5 @@
 [x] Must use Handlebars.js
    -Handlebars are now optional to use
 
-[]Hide API Keys 
+[x]Hide API Keys 
 
