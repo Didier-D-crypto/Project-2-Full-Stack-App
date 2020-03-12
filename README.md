@@ -25,11 +25,11 @@
 [x] Must follow MVC paradigm |file structure
  
 
-[] Must meet good quality coding standards (indentation, scoping, naming)
+[x] Must meet good quality coding standards (indentation, scoping, naming)
 
 
 [x] Must use Handlebars.js
    -Handlebars are now optional to use
 
 []Hide API Keys 
-Travis Linting to be implemented-
+
