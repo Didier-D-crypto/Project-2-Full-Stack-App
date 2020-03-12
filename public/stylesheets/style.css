@@ -30,7 +30,10 @@ textarea {
   color: midnightblue;
   font-weight: bold;
 }
-
+.error-message {
+  color: red;
+  font-size: 20px;
+}
 .create-your-own {
   font-family: "Cardo", serif;
 }
