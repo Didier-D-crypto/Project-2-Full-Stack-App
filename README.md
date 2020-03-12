@@ -27,9 +27,5 @@
 
 [x] Must meet good quality coding standards (indentation, scoping, naming)
 
-
-[x] Must use Handlebars.js
-   -Handlebars are now optional to use
-
 [x]Hide API Keys 
 
