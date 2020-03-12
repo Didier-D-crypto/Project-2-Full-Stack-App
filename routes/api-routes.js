@@ -1,4 +1,6 @@
 // Requiring our models and passport as we've configured it
+const nodemailer = require("nodemailer");
+
 var db = require("../models");
 var passport = require("../config/passport");
 
@@ -52,15 +54,15 @@ module.exports = function(app) {
     }
   });
 
-  app.post("/send", (req,res) => {
-    const nodemailer = require("nodemailer");
+  app.post("/send", (req, res) => {
+    console.log(req.body)
     let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "malabobby223@gmail.com", // generated ethereal user
-      pass: "1970swascool" // generated ethereal password
-    }
-  });
+      service: "gmail",
+      auth: {
+        user: "malabobby223@gmail.com", // generated ethereal user
+        pass: "1970swascool" // generated ethereal password
+      }
+    });
   
   transporter.sendMail({
     from: "malabobby223@gmail.com", // sender address

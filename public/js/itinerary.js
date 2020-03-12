@@ -154,21 +154,22 @@ function eventAJAX(newStartDate, newEndDate, city) {
 /* Node-Mailer Code */
 
 $(emailBtn).on("click", (event) => {
+  event.preventDefault();
   console.log(event.target);
-  $.post('/send', (req, res) => {
-    var mailOptions = {
-      start_date: req.query.itinStartDate,
-      end_date: req.query.itinEndDate,
-      city: req.query.itinCity,
-      food: req.query.foodTxtArea,
-      activities: req.query.itinAct,
-      nighttime: req.query.nighttime,
-      reviews: req.query.reviews
-    }
-    console.log(mailOptions);
-  });
+  const mailOptions = {
+    start_date: $("#itinStartDate").val(),
+    end_date: $("#itinEndDate").val(),
+    city: $("#itinCity").val(),
+    food: $("#foodTxtArea").val(),
+    activities: $("#foodTxtArea").val(),
+    nighttime: $("#itinNight").val(),
+    reviews: $("#itinReview").val()
+  };
+  console.log(mailOptions);
+  $.post('/send', mailOptions)
+    .done(data => console.log("email sent successfully", data))
+    .fail(error => console.warn("email send failed", error));
 });
-
   // smtpTransport.sendMail(mailOptions, function (error, response) {
     //   if (error) {
     //     console.log(error);
