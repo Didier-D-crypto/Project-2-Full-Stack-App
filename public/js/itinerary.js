@@ -117,7 +117,7 @@ function eventAJAX(newStartDate, newEndDate, city) {
       if (response.status === 400 || response.events.length === 0) {
         return $(".error-message").text("Oh No! No Events Found, Try Again.");
       }
-      for (i = 0; i < response.events.event.length; i++) {
+      for (var i = 0; i < response.events.event.length; i++) {
         let title = response.events.event[i].title;
         let address = response.events.event[i].venue_address;
         let start = response.events.event[i].start_time;
