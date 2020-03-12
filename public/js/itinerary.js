@@ -16,30 +16,45 @@ const saveItinBtn = $("#saveItinBtn");
 const emailBtn = $("#emailBtn");
 const formItin = $("#createItin");
 
-$(formItin).on("submit", (event) => {
+$(formItin).on("submit", event => {
   event.preventDefault();
-  handleNewItin();  
+  handleNewItin();
 });
 
 handleNewItin = () => {
   event.preventDefault();
   let newItin = {
-    start_date: $(itinStartDate).val().trim(),
-    end_date: $(itinEndDate).val().trim(),
-    city: $(itinCity).val().trim(),
-    food: $(foodTxtArea).val().trim(),
-    activities: $(itinAct).val().trim(),
-    nighttime: $(itinNight).val().trim(),
-    reviews: $(itinReview).val().trim(), 
-  }
-  
-  $.post('/api/itineraries', newItin)
-  .then(function(data) {
-    console.log(data);
-  });
- 
-  // was: $.post('/api/newItin', newItin)
+    start_date: $(itinStartDate)
+      .val()
+      .trim(),
+    end_date: $(itinEndDate)
+      .val()
+      .trim(),
+    city: $(itinCity)
+      .val()
+      .trim(),
+    food: $(foodTxtArea)
+      .val()
+      .trim(),
+    activities: $(itinAct)
+      .val()
+      .trim(),
+    nighttime: $(itinNight)
+      .val()
+      .trim(),
+    reviews: $(itinReview)
+      .val()
+      .trim()
+  };
 
+  $.post("/api/itineraries", newItin).then(function(data) {
+    console.log(data);
+    // **** after user clicks SAVE routes to members page, where they can see their newly created itinerary
+    window.location.href = "/members";
+  });
+};
+
+// was: $.post('/api/newItin', newItin)
 
 // if (url.indexOf("?post_id=") !== -1) {
 //   postId = url.split("=")[1];
@@ -57,16 +72,15 @@ handleNewItin = () => {
 //   }
 // }
 
-  // postItin = () => {
-  //   app.post("/api/posts", () => {
-  //     db.Itineraries.create(req.body),then(dbItin => {
-  //       res.json(dbItin);
-  //       window.location.href = "/members";
-  //       console.log(dbItin);
-  //     });
-  //   });
-  // }
-
+// postItin = () => {
+//   app.post("/api/posts", () => {
+//     db.Itineraries.create(req.body),then(dbItin => {
+//       res.json(dbItin);
+//       window.location.href = "/members";
+//       console.log(dbItin);
+//     });
+//   });
+// }
 
 $(eventSrchBtn).on("click", event => {
   $("#event-response").empty();
@@ -97,7 +111,7 @@ function eventAJAX(newStartDate, newEndDate, city) {
     dataType: "jsonp",
     method: "POST"
   })
-    .done(function (response) {
+    .done(function(response) {
       console.log(response);
       // console.log(response.events.event);
       if (response.status === 400 || response.events.length === 0) {
@@ -132,8 +146,7 @@ function eventAJAX(newStartDate, newEndDate, city) {
         $("#event-response").append(newCard);
       }
     })
-    .catch(function () {
+    .catch(function() {
       return $(".error-message").text("Oh No! No Events Found, Try Again.");
     });
-  }
 }

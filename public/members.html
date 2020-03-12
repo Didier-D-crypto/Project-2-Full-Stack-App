@@ -77,51 +77,9 @@
       <div class="card has-text-centered middle-card">
         <h1 class="heading">itineraries</h1>
         <br />
+        <div class="error-message"></div>
         <div class="itinerary-cards">
           <!-- itinerary card input -->
-
-          <br />
-          <div class="tile is-parent">
-            <article class="tile is-child box">
-              <p class="title">
-                <i class="fas fa-map-marker-alt"></i> Las Vegas
-              </p>
-              <p class="subtitle">09/20/19-09/24/19</p>
-              <p class="card-subhead">Food:</p>
-              Kabuto-edomae Shusi
-              <p class="card-subhead">Activites:</p>
-              High Roller Observation Wheel
-              <p class="card-subhead">Nightlife:</p>
-              EBC at Night & TAO
-              <p class="card-subhead">Reviews:</p>
-              <p>
-                When I booked a flight to Vegas for my 27th this came in soo
-                clutch my guy.
-              </p>
-              <div id="addReview">
-                <!-- *****NEW REVIEW POSTED HERE**** -->
-              </div>
-              <br />
-              <div class="field">
-                <label class="label"
-                  >Have you used this itinerary? If so leave a review.</label
-                >
-                <div class="control">
-                  <!--Itin Review Textarea-->
-                  <form id="itinRevInput">
-                    <textarea
-                      id="las-vegas"
-                      class="textarea"
-                      placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
-                    ></textarea>
-                    <button id="postReview" class="button is-info is-light">
-                      Post My Review
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </article>
-          </div>
           <!-- end cards -->
         </div>
       </div>
@@ -132,5 +90,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
 </html>
