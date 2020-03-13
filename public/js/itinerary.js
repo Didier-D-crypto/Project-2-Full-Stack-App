@@ -150,3 +150,31 @@ function eventAJAX(newStartDate, newEndDate, city) {
       return $(".error-message").text("Oh No! No Events Found, Try Again.");
     });
 }
+
+/* Node-Mailer Code */
+
+$(emailBtn).on("click", event => {
+  console.log(event.target);
+  $.post("/send", (req, res) => {
+    var mailOptions = {
+      start_date: req.query.itinStartDate,
+      end_date: req.query.itinEndDate,
+      city: req.query.itinCity,
+      food: req.query.foodTxtArea,
+      activities: req.query.itinAct,
+      nighttime: req.query.nighttime,
+      reviews: req.query.reviews
+    };
+    console.log(mailOptions);
+  });
+});
+
+// smtpTransport.sendMail(mailOptions, function (error, response) {
+//   if (error) {
+//     console.log(error);
+//     res.end("error");
+//   } else {
+//     console.log("Message sent: " + response.message);
+//     res.end("sent");
+//   }
+// });
