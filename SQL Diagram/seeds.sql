@@ -5,20 +5,20 @@ USE itinerary_db;
 
 CREATE TABLE Cities (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
+    name VARCHAR(255)
   
 );
 
 
 CREATE TABLE Users (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255),
-)
+    email VARCHAR(255)
+);
 
 CREATE TABLE Itineraries (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    start_date DATE (255),
-    end_date DATE (255),
+    start_date DATE,
+    end_date DATE,
     city VARCHAR (255),
     food VARCHAR (255),
     activities VARCHAR (255),

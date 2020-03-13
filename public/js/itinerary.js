@@ -47,7 +47,7 @@ handleNewItin = () => {
       .trim()
   };
 
-  $.post("/api/itineraries", newItin).then(function (data) {
+  $.post("/api/itineraries", newItin).then(function(data) {
     console.log(data);
     // **** after user clicks SAVE routes to members page, where they can see their newly created itinerary
     window.location.href = "/members";
@@ -111,13 +111,13 @@ function eventAJAX(newStartDate, newEndDate, city) {
     dataType: "jsonp",
     method: "POST"
   })
-    .done(function (response) {
+    .done(function(response) {
       console.log(response);
       // console.log(response.events.event);
       if (response.status === 400 || response.events.length === 0) {
         return $(".error-message").text("Oh No! No Events Found, Try Again.");
       }
-      for (i = 0; i < response.events.event.length; i++) {
+      for (var i = 0; i < response.events.event.length; i++) {
         let title = response.events.event[i].title;
         let address = response.events.event[i].venue_address;
         let start = response.events.event[i].start_time;
@@ -146,14 +146,14 @@ function eventAJAX(newStartDate, newEndDate, city) {
         $("#event-response").append(newCard);
       }
     })
-    .catch(function () {
+    .catch(function() {
       return $(".error-message").text("Oh No! No Events Found, Try Again.");
     });
 }
 
 /* Node-Mailer Code */
 
-$(emailBtn).on("click", (event) => {
+$(emailBtn).on("click", event => {
   event.preventDefault();
   console.log(event.target);
   const mailOptions = {
@@ -166,16 +166,16 @@ $(emailBtn).on("click", (event) => {
     reviews: $("#itinReview").val()
   };
   console.log(mailOptions);
-  $.post('/send', mailOptions)
+  $.post("/send", mailOptions)
     .done(data => console.log("email sent successfully", data))
     .fail(error => console.warn("email send failed", error));
 });
-  // smtpTransport.sendMail(mailOptions, function (error, response) {
-    //   if (error) {
-    //     console.log(error);
-    //     res.end("error");
-    //   } else {
-    //     console.log("Message sent: " + response.message);
-    //     res.end("sent");
-    //   }
-    // });
+// smtpTransport.sendMail(mailOptions, function (error, response) {
+//   if (error) {
+//     console.log(error);
+//     res.end("error");
+//   } else {
+//     console.log("Message sent: " + response.message);
+//     res.end("sent");
+//   }
+// });
