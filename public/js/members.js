@@ -4,22 +4,16 @@ $(document).ready(function() {
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
   });
-
   // function postAReview(city) {
   //   console.log(city);
   // }
 });
-
 let itinCardContainer = $(".itinerary-cards");
-
 // get new itin posts all itineraries from our database to the members page
 getNewItin();
-
 // New itinerary get route to append divs to page
 function getNewItin() {
-  $.get("api/itineraries", function(data) {
-    console.log(data);
-  })
+  $.get("api/itineraries", function(data) {})
     .then(function(response) {
       // reverse for loop adds newest itinerary at top
       for (var i = response.length - 1; i >= 0; i--) {
@@ -31,7 +25,6 @@ function getNewItin() {
         let nighttime = response[i].nighttime;
         let reviews = response[i].reviews;
         let id = response[i].id;
-
         var itinCards = $(`          <div class="tile is-parent">`).html(
           `<article class="tile is-child box">
         <p class="title">
@@ -60,7 +53,7 @@ function getNewItin() {
             <!--Itin Review Textarea-->
             <form id="itinRevInput${id}">
               <textarea
-                id="${id}"
+                id="textarea${id}"
                 class="textarea"
                 placeholder="What did you enjoy or not enjoy this trip? Any suggestions for other travelers?"
               ></textarea>
@@ -75,7 +68,20 @@ function getNewItin() {
         );
         $(".itinerary-cards").append(itinCards);
       }
-      console.log(itinCards);
+      for (var i = response.length - 1; i >= 0; i--) {
+        let id = response[i].id;
+        const button = document.querySelector(`#postReview${id}`);
+        button.addEventListener("click", e => {
+          e.preventDefault();
+          const postReviewId = e.target.id;
+          const id = postReviewId.replace("postReview", "");
+          //   get value of text area
+          const idTextArea = document.querySelector(`#textarea${id}`);
+          const value = idTextArea.value;
+          // append to page
+          $(`#addReview${id}`).append(value);
+        });
+      }
     })
     .catch(function() {
       return $(".error-message").text(
