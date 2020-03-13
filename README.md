@@ -16,8 +16,8 @@ Trip Tips is an application that assists the user in creating, viewing, and revi
 
 ## Utilizing the App
 
-- Experience the deployed app on Heroku: [Here](https://rocky-island-15592.herokuapp.com/ "Here")
-- View the repository: [Here](https://github.com/Didier-D-crypto/Project-2-Full-Stack-App "Here")
+- Experience the deployed app on Heroku: [Here](https://grouptriptips.herokuapp.com/ "Here")
+- View the original repository: [Here](https://github.com/Didier-D-crypto/Project-2-Full-Stack-App "Here")
 - User is routed to "Login" page, where the user can "Login" or click to "Sign Up"
 - After the user signs up, they can view exisiting itineraries on the main page. If the user has used this itinerary the user can input a review for that particular city to "Post a Review" to our page so other users can view.
 - The user can also "Create Your Own" where they are routed to a page where they can create their own itinerary, and "Save" it to our database where it will be added to our main page, or "Email"
@@ -28,12 +28,12 @@ Trip Tips is an application that assists the user in creating, viewing, and revi
 
 ## Log In or Sign Up:
 
-![Signup](public/img/landingpage:signin.mp4 "signup")
+![Signup](public/img/signin.gif "signup")
 
 ## Create your Own Itinerary & Search for Events:
 
-![create](public/img/createitinerary.mp4 "create")
-![create](public/img/eventappend.mp4 "create")
+![create](public/img/createitin.gif "create")
+![event](public/img/eventappend.gif "eventappend")
 
 ## Tech used
 
