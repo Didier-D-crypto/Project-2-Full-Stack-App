@@ -4,17 +4,13 @@ $(document).ready(function() {
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.email);
   });
-
   // function postAReview(city) {
   //   console.log(city);
   // }
 });
-
 let itinCardContainer = $(".itinerary-cards");
-
 // get new itin posts all itineraries from our database to the members page
 getNewItin();
-
 // New itinerary get route to append divs to page
 function getNewItin() {
   $.get("api/itineraries", function(data) {})
@@ -29,7 +25,6 @@ function getNewItin() {
         let nighttime = response[i].nighttime;
         let reviews = response[i].reviews;
         let id = response[i].id;
-
         var itinCards = $(`          <div class="tile is-parent">`).html(
           `<article class="tile is-child box">
         <p class="title">
@@ -73,7 +68,6 @@ function getNewItin() {
         );
         $(".itinerary-cards").append(itinCards);
       }
-
       for (var i = response.length - 1; i >= 0; i--) {
         let id = response[i].id;
         const button = document.querySelector(`#postReview${id}`);
