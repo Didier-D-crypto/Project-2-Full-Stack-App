@@ -112,9 +112,7 @@ function eventAJAX(newStartDate, newEndDate, city) {
     method: "POST"
   })
     .done(function(response) {
-      console.log(response);
-      // console.log(response.events.event);
-      if (response.status === 400 || response.events.length === 0) {
+      if (response.status === 400 || response.events.event.length === 0) {
         return $(".error-message").text("Oh No! No Events Found, Try Again.");
       }
       for (var i = 0; i < response.events.event.length; i++) {
