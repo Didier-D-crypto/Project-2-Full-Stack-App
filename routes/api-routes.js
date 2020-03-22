@@ -183,7 +183,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.Itineraries]
+      //include: [db.Itineraries]
     }).then(dbUser => {
       res.json(dbUser);
     });
@@ -219,7 +219,7 @@ module.exports = function(app) {
     }
     db.Itineraries.findAll({
       where: query,
-      include: [db.User]
+     // include: [db.User]
     }).then(dbItin => {
       res.json(dbItin);
     });
@@ -232,7 +232,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.User]
+    //  include: [db.User]
     }).then(dbItin => {
       res.json(dbItin);
     });
@@ -247,28 +247,28 @@ module.exports = function(app) {
   });
 
   // DELETE route for deleting Itineraries
-  // app.delete("api/itineraries/:id", (req, res) => {
-  //   db.Itineraries.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(dbItin => {
-  //     res.json(dbItin);
-  //   });
-  // });
+  app.delete("/api/itineraries/:id", (req, res) => {
+    db.Itineraries.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbItin => {
+      res.json(dbItin);
+    });
+  });
 
   // PUT route for updating Itineraries
-  // app.put("api/itineraries", (req, res) => {
-  //   db.Itineraries.update(
-  //     req.body,
-  //     {
-  //       where: {
-  //         id: req.body.id
-  //       }
-  //     }).then(dbItin => {
-  //       res.json(dbItin)
-  //     });
-  // });
+  app.put("api/itineraries", (req, res) => {
+    db.Itineraries.update(
+      req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(dbItin => {
+        res.json(dbItin)
+      });
+  });
 
   /* Cities API-Routes */
 
@@ -283,7 +283,7 @@ module.exports = function(app) {
     }
     db.Cities.findAll({
       where: query,
-      include: [db.Itineraries]
+    //  include: [db.Itineraries]
     }).then(dbItin => {
       res.json(dbItin);
     });
@@ -295,7 +295,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.Itineraries]
+     // include: [db.Itineraries]
     }).then(dbItin => {
       res.json(dbItin);
     });

@@ -8,6 +8,16 @@ $(document).ready(function() {
   //   console.log(city);
   // }
 });
+
+$(document).on('click', 'button.delete', (event) => {
+  event.preventDefault();
+ // console.log(event.target);
+  let IDs = $(event.target).attr("data-id");
+  // console.log(IDs);
+  // console.log(this);
+  deleteItin(IDs);
+});
+
 let itinCardContainer = $(".itinerary-cards");
 // get new itin posts all itineraries from our database to the members page
 getNewItin();
@@ -25,7 +35,7 @@ function getNewItin() {
         let nighttime = response[i].nighttime;
         let reviews = response[i].reviews;
         let id = response[i].id;
-        var itinCards = $(`          <div class="tile is-parent">`).html(
+        var itinCards = $(`          <div class="tile is-parent" data-id='${id}'>`).html(
           `<article class="tile is-child box">
         <p class="title">
           <i class="fas fa-map-marker-alt"></i> ${cityFromForm}
@@ -60,13 +70,21 @@ function getNewItin() {
               <button id="postReview${id}" class="button is-info is-light">
                 Post My Review
               </button>
+              <div class="block">
+              <span class="tag is-success">
+                Delete This Itinerary
+                <button class="delete is-large" data-id='${id}'></button>
+              </span>
+            </div>
             </form>
           </div>
         </div>
       </article>
     </div>`
+    //    <a class="delete is-large" id="deleteItin" data-id='${id}'></a>
         );
         $(".itinerary-cards").append(itinCards);
+      //  console.log(response[i].id);
       }
       for (var i = response.length - 1; i >= 0; i--) {
         let id = response[i].id;
@@ -89,3 +107,23 @@ function getNewItin() {
       );
     });
 }
+
+deleteItin = (IDs) => {
+  // console.log(this);
+  // console.log($(this).data("data-id"));
+  event.preventDefault();
+  console.log(IDs);    
+  $.ajax({
+    method: "DELETE",
+    url: '/api/itineraries/' + IDs
+  })
+    // On success, run the following code
+    .then(function() {
+      alert("Deleted Successfully!");
+      console.log("Deleted Successfully!");
+      location.reload();
+    });
+  //$(this).closest("div").remove();
+//$(this).attr("data-id")
+}
+

@@ -54,34 +54,6 @@ handleNewItin = () => {
   });
 };
 
-// was: $.post('/api/newItin', newItin)
-
-// if (url.indexOf("?post_id=") !== -1) {
-//   postId = url.split("=")[1];
-//   getPostData(postId, "post");
-//   console.log(postId);
-// }
-
-//postItin();
-//   if (updating) {
-//     newItin.id = ItinId;
-//     updateItin(newItin);
-//   }
-//   else {
-//     postItin(newItin);
-//   }
-// }
-
-// postItin = () => {
-//   app.post("/api/posts", () => {
-//     db.Itineraries.create(req.body),then(dbItin => {
-//       res.json(dbItin);
-//       window.location.href = "/members";
-//       console.log(dbItin);
-//     });
-//   });
-// }
-
 $(eventSrchBtn).on("click", event => {
   $("#event-response").empty();
   let startDate = $(citySearchStartDate)
